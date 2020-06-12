@@ -19,10 +19,29 @@ namespace StatisticsDojo
         [Fact]
         public async Task Should_Return_MinValue()
         {
-            var list = new List<int>() { 1, 4, 8, 20, 50};
-            const int minValue = 1;
-            Assert.Equal(list.Min(), minValue);
+            var list = new List<int>() { 2, 4, 8, 20, 50 };
+            var min = _statistics.minValue(list);
+            int minValue = list.Min();
+            Assert.Equal(min, minValue);
 
+        }
+
+        [Fact]
+        public async Task Should_Return_MaxValue()
+        {
+            var list = new List<int> { 2, 4, 8, 20, 50 };
+            var max = _statistics.max(list);
+            int maxValue = list.Max();
+            Assert.Equal(max, maxValue);
+        }
+
+        [Fact]
+        public async Task Should_Return_Average()
+        {
+            var list = new List<int> { 2, 4, 8, 20, 50 };
+            var avg = _statistics.avg(list);
+            int avgValue = list.Sum() / list.Count();
+            Assert.Equal(avg, avgValue);
         }
     }
 }
