@@ -6,7 +6,7 @@ namespace Dojo
     {
         static void Main(string[] args)
         {
-
+            GetMinValue();
         }
 
         public static void GetMinValue()
