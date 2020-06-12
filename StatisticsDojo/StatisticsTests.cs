@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Principal;
-using System.Threading.Tasks;
-using Xunit;
+using System.Text;
 
 namespace StatisticsDojo
 {
-    public class Statiscis
+    class StatisticsTests
     {
+        private readonly Statiscis _statistic;
+        public StatisticsTests()
+        {
+            
+        }
+
         [Fact]
         [InlineData(-3, 4, 5, 1)]
         public async Task Should_Return_MinValue(int number1, int number2, int number3, int number4)
@@ -21,17 +24,10 @@ namespace StatisticsDojo
 
 
             Console.WriteLine(numbersToEvaluate.Min());
-            
-        }
-    }
 
-    class Evaluator
-    {
-        public Evaluator()
-        {
+            Assert
+
 
         }
-        public int MinValue { get; set; }
-        public int MaxValue { get; set; }
     }
 }
