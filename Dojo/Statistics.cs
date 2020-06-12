@@ -10,16 +10,15 @@ namespace StatisticsDojo
     {
         int minValue(List<int> numbers);
         int max(List<int> numbers);
-        int avg(List<int> numbers);
+        double avg(List<int> numbers);
     }
 
     public class Statistics : MathOperations
     {
-        public void calculateValues(List<int> numbers)
+        public int calculateValues(List<int> numbers)
         {
             int count = numbers.Count;
-            int min = minValue(numbers);
-
+            return minValue(numbers);
         }
 
         public int minValue(List<int> numbers)
@@ -32,7 +31,7 @@ namespace StatisticsDojo
             return numbers.Max();
         }
 
-        public int avg(List<int> numbers)
+        public double avg(List<int> numbers)
         {
             return numbers.Sum() / numbers.Count;
         }
