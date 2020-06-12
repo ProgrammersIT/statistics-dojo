@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Security.Principal;
-using System.Threading.Tasks;
 
 namespace StatisticsDojo
 {
@@ -11,6 +8,7 @@ namespace StatisticsDojo
         int minValue(List<int> numbers);
         int max(List<int> numbers);
         double avg(List<int> numbers);
+        int Lenght(List<int> numbers);
     }
 
     public class Statistics : MathOperations
@@ -36,7 +34,10 @@ namespace StatisticsDojo
             return numbers.Sum() / numbers.Count;
         }
 
-
+        public int Lenght(List<int> numbers)
+        {
+            return numbers.Count;
+        }
     }
 
     //class Evaluator
