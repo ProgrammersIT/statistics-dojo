@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Principal;
 using Xunit;
 
@@ -17,11 +18,8 @@ namespace StatisticsDojo
             numbersToEvaluate.Add(number3);
             numbersToEvaluate.Add(number4);
 
-            foreach(var i in numbersToEvaluate)
-            {
-
-            };
-
+            Console.WriteLine(numbersToEvaluate.Min());
+            
         }
     }
 
