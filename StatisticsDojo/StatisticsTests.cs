@@ -7,7 +7,7 @@ using Xunit;
 
 namespace StatisticsDojo
 {
-    class StatisticsTests
+    public class StatisticsTests
     {
         private Statistics _statistics;
 
@@ -17,9 +17,9 @@ namespace StatisticsDojo
         }
 
         [Fact]
-        [InlineData(-3, 4, 5, 1)]
-        public async Task Should_Return_MinValue(params int[] list)
+        public async Task Should_Return_MinValue()
         {
+            var list = new List<int>();
             const int minValue = 1;
             Assert.Equal(list.Min(), minValue);
         }
