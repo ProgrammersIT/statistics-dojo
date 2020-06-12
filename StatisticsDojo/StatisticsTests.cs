@@ -19,11 +19,10 @@ namespace StatisticsDojo
         [Fact]
         public async Task Should_Return_MinValue()
         {
-            var list = new List<int>();
+            var list = new List<int>() { 1, 4, 8, 20, 50};
             const int minValue = 1;
             Assert.Equal(list.Min(), minValue);
-            list.Add(1);
-            list.Add(3);
+
         }
     }
 }
