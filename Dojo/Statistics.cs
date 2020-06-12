@@ -8,13 +8,36 @@ namespace StatisticsDojo
 {
     interface MathOperations
     {
-        int min();
-        int max();
-        int avg();
+        int minValue(List<int> numbers);
+        int max(List<int> numbers);
+        int avg(List<int> numbers);
     }
 
-    public class Statistics
+    public class Statistics : MathOperations
     {
+        public void calculateValues(List<int> numbers)
+        {
+            int count = numbers.Count;
+            int min = minValue(numbers);
+
+        }
+
+        public int minValue(List<int> numbers)
+        {
+            return numbers.Min();
+        }
+
+        public int max(List<int> numbers)
+        {
+            return numbers.Max();
+        }
+
+        public int avg(List<int> numbers)
+        {
+            return numbers.Sum() / numbers.Count;
+        }
+
+
     }
 
     //class Evaluator
