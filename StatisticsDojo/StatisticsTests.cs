@@ -22,6 +22,8 @@ namespace StatisticsDojo
             var list = new List<int>();
             const int minValue = 1;
             Assert.Equal(list.Min(), minValue);
+            list.Add(1);
+            list.Add(3);
         }
     }
 }
